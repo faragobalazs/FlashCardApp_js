@@ -5,9 +5,9 @@ import Cards from "../pages/FlashCardPage";
 
 function App() {
   return (
-    <div className="app">
+    <div className="min-h-screen flex flex-col">
       <NavBar />
-      <main className="main-content">
+      <main className="flex-1 min-h-0 flex flex-col overflow-auto">
         <Cards />
       </main>
       <Footer />
