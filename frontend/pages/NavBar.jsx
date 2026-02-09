@@ -1,14 +1,31 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../src/index.css";
 import "../src/App.css";
 import "primeicons/primeicons.css";
 
 export default function NavBar() {
-  const [themeButton, setThemeButton] = useState(true);
+  const [themeButton, setThemeButton] = useState(() => {
+    if (
+      typeof window !== "undefined" &&
+      localStorage.getItem("theme") === "dark"
+    )
+      return true;
+  });
+
+  useEffect(() => {
+    const root = document.documentElement;
+    if (themeButton) {
+      root.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    } else {
+      root.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    }
+  }, [themeButton]);
   return (
     <>
-      <div className="flex flex-wrap flex-row sm:flex-row items-center gap-2 bg-gray-200">
-        <h1 className="m-2 text-4xl text-gray-500 sm:text-center">
+      <div className="flex flex-wrap flex-row sm:flex-row items-center gap-2 bg-gray-200 dark:bg-gray-900">
+        <h1 className="m-2 text-4xl sm:text-center text-gray-500 dark:text-gray-100">
           Flashcards
         </h1>
         <div className="flex justify-center">
