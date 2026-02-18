@@ -2,8 +2,10 @@ import { useState, useEffect } from "react";
 import "../src/index.css";
 import "../src/App.css";
 import "primeicons/primeicons.css";
+import { useNavigate } from "react-router-dom";
 
 export default function NavBar() {
+  const navigate = useNavigate();
   const [themeButton, setThemeButton] = useState(() => {
     if (
       typeof window !== "undefined" &&
@@ -33,21 +35,26 @@ export default function NavBar() {
             className="pi pi-language m-3 text-gray-400 hover:text-gray-600 active:text-white"
             style={{ fontSize: "1.5rem" }}
             title="Languages"
+            onClick={() => navigate("/languages")}
           ></button>
+
           <button
             className="pi pi-clone m-3 text-gray-400 hover:text-gray-600 active:text-white"
             style={{ fontSize: "1.5rem" }}
             title="Learning"
+            onClick={() => navigate("/learning")}
           ></button>
           <button
             className="pi pi-database m-3 text-gray-400 hover:text-gray-600 active:text-white"
             style={{ fontSize: "1.5rem" }}
             title="Flashcards"
+            onClick={() => navigate("/flashcards")}
           ></button>
           <button
             className="pi pi-chart-line m-3 text-gray-400 hover:text-gray-600 active:text-white"
             style={{ fontSize: "1.5rem" }}
             title="Stats"
+            onClick={() => navigate("/stats")}
           ></button>
           <div>
             {themeButton ? (
@@ -70,7 +77,8 @@ export default function NavBar() {
           <button
             className="pi pi-user m-3 text-gray-400 hover:text-gray-600 active:text-white"
             style={{ fontSize: "1.5rem" }}
-            title="Sign In"
+            title="Log In"
+            onClick={() => navigate("/")}
           ></button>
         </div>
       </div>

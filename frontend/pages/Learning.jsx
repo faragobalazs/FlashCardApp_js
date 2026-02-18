@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../src/index.css";
 import "../src/App.css";
 
-export default function Cards() {
+export default function Learning() {
   const [showFlip, setShowFlip] = useState(true);
   const [showSolution, setShowSolution] = useState(true);
   return (
@@ -31,7 +31,7 @@ export default function Cards() {
               setShowFlip(false);
               setShowSolution(false);
             }}
-            className="w-full h-20 text-3xl text-gray-400 bg-gray-100 border-0.5 border-gray shrink-0"
+            className="w-full h-20 text-3xl text-gray-400 bg-gray-100 dark:bg-gray-800 border-0.5 border-gray shrink-0"
           >
             Flip
           </button>
