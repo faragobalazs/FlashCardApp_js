@@ -31,7 +31,7 @@ export default function Learning() {
               setShowFlip(false);
               setShowSolution(false);
             }}
-            className="w-full h-20 text-3xl text-gray-400 bg-gray-100 dark:bg-gray-800 border-0.5 border-gray shrink-0"
+            className="w-full h-20 text-3xl text-gray-400 bg-gray-100 dark:bg-gray-800 border-0.5 border-gray shrink-0 hover:bg-gray-300 dark:hover:bg-gray-700"
           >
             flip
           </button>
@@ -42,7 +42,7 @@ export default function Learning() {
                 setShowFlip(true);
                 setShowSolution(true);
               }}
-              className="w-1/2 h-20 text-2xl text-gray-500 bg-red-100 dark:bg-amber-900 dark:text-gray-100 border-0.5 border-gray shrink-0"
+              className="w-1/2 h-20 text-2xl text-gray-500 bg-red-100 dark:bg-amber-900 dark:text-gray-100 border-0.5 border-gray shrink-0 "
             >
               Fail
             </button>

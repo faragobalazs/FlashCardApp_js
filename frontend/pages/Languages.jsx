@@ -30,7 +30,7 @@ export default function Languages() {
               key={lang._id}
               className="flex flex-col justify-center border-5 border-gray-100 dark:border-gray-800 m-10 text-gray-950 dark:text-gray-100 text-3xl"
             >
-              <div className="border-20 border-gray-50 hover:bg-gray-50">
+              <div className="h-full border-20 border-gray-50 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-500">
                 <div className="flex flex-col m-10">
                   <div className="text-center">{lang.name}</div>
                   <div className="flex flex-row text-lg">
@@ -47,7 +47,7 @@ export default function Languages() {
           ))}
         </ul>
       </div>
-      <button className="w-full h-20 text-3xl text-gray-400 bg-gray-100 dark:bg-gray-800 hover:bg-gray-100">
+      <button className="w-full h-20 text-3xl text-gray-400 bg-gray-100 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700">
         add
       </button>
     </>
